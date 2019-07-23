@@ -13,7 +13,7 @@ class TextMessage < Message
 
   def not_sent_in_last_ten_minutes
     messages_to_recipient_sent_in_last_ten_mins = TextMessage.where(recipient: recipient, created_at: 10.minutes.ago..Time.now)
-    binding.pry
+    # binding.pry
   end
 
   def message_body
