@@ -1,15 +1,22 @@
+.fluid-container.brand-inverted.mb-5
+  .container
+    .row.text-center
+      .col-12.mt-5.mb-3
+        %h1.primary-color
+          Send a Red Card
+      .col-12.col-md-6.offset-md-3.mb-5
+        %p
+          All people in the United States, regardless of immigration status, have certain rights and protections under the U.S. Constitution. The ILRC’s Red Cards help people assert their rights and defend themselves in many situations, such as when ICE agents go to a home. 
+        %p.pb-0.mb-0
+          This site allows you to send the Red Card to anyone who needs it.
 .container
-  .row.text-center
-    .col-12.mb-5
-      %h1.primary-color
-        Send a Red Card
   .row
     .col-12
       %ul#pills-tab.nav.nav-pills.mb-3.justify-content-center{:role => "tablist"}
         %li.nav-item
-          %a#pills-home-tab.nav-link.active{"aria-controls" => "pills-home", "aria-selected" => "true", "data-toggle" => "pill", :href => "#pills-home", :role => "tab"} Home
+          %a#pills-home-tab.nav-link.active{"aria-controls" => "pills-home", "aria-selected" => "true", "data-toggle" => "pill", :href => "#pills-home", :role => "tab"} Text Message
         %li.nav-item
-          %a#pills-profile-tab.nav-link{"aria-controls" => "pills-profile", "aria-selected" => "false", "data-toggle" => "pill", :href => "#pills-profile", :role => "tab"} Profile
+          %a#pills-profile-tab.nav-link{"aria-controls" => "pills-profile", "aria-selected" => "false", "data-toggle" => "pill", :href => "#pills-profile", :role => "tab"} Email
       #pills-tabContent.tab-content
         #pills-home.tab-pane.fade.show.active{"aria-labelledby" => "pills-home-tab", :role => "tabpanel"}
           .row

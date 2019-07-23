@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root 'main#home'
-  # get '/about', to: 'main#about'
+  get '/card', to: 'main#card'
 
   resources :messages
   resources :text_messages, :controller => 'messages'

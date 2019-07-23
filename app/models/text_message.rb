@@ -7,7 +7,7 @@ class TextMessage < Message
     $twilio_client.messages.create(
       from: ENV['TWILIO_NUMBER'],
       to: recipient,
-      body: "Hey friend!"
+      body: message_body
       )
   end
 
@@ -17,7 +17,7 @@ class TextMessage < Message
   end
 
   def message_body
-    "Please go here to know your rights: #{ENV['HOST_URL: http://localhost:3000/card']}"
+    "Please go here to know your rights: #{ENV['HOST_URL']}/card"
   end
   
 end
