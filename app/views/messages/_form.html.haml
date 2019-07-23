@@ -1,0 +1,18 @@
+= form_with(model: message, local: true) do |form|
+  - if message.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(message.errors.count, "error")
+        prohibited this message from being saved:
+      %ul
+        - message.errors.full_messages.each do |message|
+          %li= message
+  .field
+    -# = form.label :type
+    -# = form.text_field :type
+    = form.hidden_field :type
+  .field.form-group
+    = form.label :recipient, "Recipient's Phone Number"
+    = form.text_field :recipient, class: 'form-control'
+  .actions.text-right
+    = form.submit 'Send', class: 'btn btn-primary'
