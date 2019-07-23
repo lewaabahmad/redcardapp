@@ -1,0 +1,24 @@
+// Place all the styles related to the Main controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import 'bootstrap';
+
+$primary: #C02C31;
+
+.primary-color {
+  color: $primary;
+}
+
+nav {
+  a {
+    color: $primary;
+    font-weight: bold;
+
+    &:hover {
+      color: $primary;
+      font-weight: bold;
+      text-decoration: underline !important;
+    }
+  }
+}
