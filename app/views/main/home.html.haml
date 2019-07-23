@@ -1,8 +1,28 @@
 .container
   .row.text-center
-    .col-12
+    .col-12.mb-5
       %h1.primary-color
         Send a Red Card
   .row
     .col-12
-      = render 'messages/form', message: @message
+      %ul#pills-tab.nav.nav-pills.mb-3.justify-content-center{:role => "tablist"}
+        %li.nav-item
+          %a#pills-home-tab.nav-link.active{"aria-controls" => "pills-home", "aria-selected" => "true", "data-toggle" => "pill", :href => "#pills-home", :role => "tab"} Home
+        %li.nav-item
+          %a#pills-profile-tab.nav-link{"aria-controls" => "pills-profile", "aria-selected" => "false", "data-toggle" => "pill", :href => "#pills-profile", :role => "tab"} Profile
+      #pills-tabContent.tab-content
+        #pills-home.tab-pane.fade.show.active{"aria-labelledby" => "pills-home-tab", :role => "tabpanel"}
+          .row
+            .col-12.col-md-8.offset-md-2.col-lg-6.offset-lg-3
+              = render 'messages/form', message: @message
+        #pills-profile.tab-pane.fade{"aria-labelledby" => "pills-profile-tab", :role => "tabpanel"}
+          .row
+            .col-12.col-md-6.offset-md-3
+              .jumbotron.p-5.text-center
+                %p.p-0.mb-2
+                  Our sincerest apologies. We have yet to implement the capacity to send a Red Card via email. Please visit us soon - we intend to add this feature.
+                %p.p-0.m-0
+                  If you need this feature, please 
+                  %a{href: '/contact'}
+                    contact us
+                  so that we can prioritize its development.

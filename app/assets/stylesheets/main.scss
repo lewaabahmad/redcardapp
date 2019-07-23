@@ -2,9 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-@import 'bootstrap';
 
 $primary: #C02C31;
+$theme-colors: (
+  "primary": $primary,
+);
+
+@import 'bootstrap';
 
 .primary-color {
   color: $primary;

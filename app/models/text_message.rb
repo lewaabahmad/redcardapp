@@ -1,6 +1,7 @@
 class TextMessage < Message
 
   before_create :send_message
+  validate :not_sent_in_last_ten_minutes
 
   def send_message
     $twilio_client.messages.create(
@@ -8,6 +9,11 @@ class TextMessage < Message
       to: recipient,
       body: "Hey friend!"
       )
+  end
+
+  def not_sent_in_last_ten_minutes
+    messages_to_recipient_sent_in_last_ten_mins = TextMessage.where(recipient: recipient, created_at: 10.minutes.ago..Time.now)
+    binding.pry
   end
 
   def message_body
