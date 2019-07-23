@@ -28,7 +28,10 @@ class MessagesController < ApplicationController
 
     respond_to do |format|
       if @message.save
-        format.html { redirect_to @message, notice: 'Message was successfully created.' }
+        format.html {
+          flash[:success] = "Text message was successfully sent to #{@message.recipient} ✊"
+          redirect_to '/'
+        }
         # format.json { render :show, status: :created, location: @message }
       else
         format.html { render :new }

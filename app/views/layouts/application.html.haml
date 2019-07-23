@@ -2,7 +2,9 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title Redcardapp
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+
+    %title Red Card Sender
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag    'application', media: 'all'

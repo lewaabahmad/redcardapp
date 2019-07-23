@@ -19,6 +19,11 @@
           %a#pills-profile-tab.nav-link{"aria-controls" => "pills-profile", "aria-selected" => "false", "data-toggle" => "pill", :href => "#pills-profile", :role => "tab"} Email
       #pills-tabContent.tab-content
         #pills-home.tab-pane.fade.show.active{"aria-labelledby" => "pills-home-tab", :role => "tabpanel"}
+          - if flash[:success]
+            .row
+              .col-12.col-md-8.offset-md-2.col-lg-6.offset-lg-3
+                .alert.alert-success.alert-dismissible.fade.show{:role => "alert"}
+                  = flash[:success]                
           .row
             .col-12.col-md-8.offset-md-2.col-lg-6.offset-lg-3
               = render 'messages/form', message: @message
