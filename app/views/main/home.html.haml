@@ -27,12 +27,18 @@
 #everything-else
   .fluid-container.brand-inverted.mb-3
     .container
-      .row.text-center
+      .row
         .col-12.col-md-6.offset-md-3.mt-2.mb-1.mt-md-5.mb-md-3
-          %h1.primary-color
-            Digital Red Card
-            %a{"aria-controls" => "show-help", "aria-expanded" => "false", "data-toggle" => "collapse", :href => "#show-help", :role => "button"}
-              = octicon "question", class: 'float-right', height: 22, fill: '#fff'
+          .row
+            .col-8
+              %h1.primary-color
+                Digital Red Card
+            .col-4
+              .float-right
+                %a{"aria-controls" => "show-help", "aria-expanded" => "false", "data-toggle" => "collapse", :href => "#show-help", :role => "button"}
+                  = octicon "question", height: 22, fill: '#fff'
+                %a.ml-3{"aria-controls" => "show-help", "aria-expanded" => "false", "data-toggle" => "collapse", :href => "#show-help", :role => "button"}
+                  = octicon "three-bars", height: 22, fill: '#fff'
       .row.text-center
         .col-12.col-lg-8.offset-lg-2
           #show-help.collapse
@@ -51,7 +57,7 @@
                 %li
                   If you are outside of your home, ask the agent if you are free to leave and if they say yes, leave calmly.
                 %li
-                  GIVE THIS CARD TO THE AGENT. If you are inside of your home, show the card through the window or slide it under the door.
+                  DO NOT GIVE YOUR PHONE TO THE AGENT. If you are inside of your home or car, show your phone through the window. You may give a physical copy of this card to the agent.
           -# %p.pb-0.mb-0
           -#   This site allows you to send the Red Card to anyone who needs it.
   .container
@@ -89,8 +95,10 @@
         %p Share:
         %a{target: '_blank', href: "mailto:?subject=Check out the Digital Red Card&body=Anyone, regardless of citizenship has 4th and 5th ammendment rights. See them here: https://redcardapp.herokuapp.com"}
           = octicon "mail", height: 32, fill: '#C02C31'
-        %a.mx-3{"aria-controls" => "show-text", "aria-expanded" => "false", "data-toggle" => "collapse", :href => "#show-text", :role => "button"}
+        %a.ml-3{"aria-controls" => "show-text", "aria-expanded" => "false", "data-toggle" => "collapse", :href => "#show-text", :role => "button"}
           = octicon "device-mobile", height: 32, fill: '#C02C31'
+        %a.ml-3{"aria-controls" => "show-copy", "aria-expanded" => "false", "data-toggle" => "collapse", :href => "#show-copy", :role => "button"}
+          = octicon "clippy", height: 32, fill: '#C02C31'
   #show-text.collapse
     .container
       .row
@@ -101,7 +109,28 @@
           .alert.alert-danger
             Unfortunately, it costs money to send texts and this app is not funded. As such, this feature is disabled. If you're interested in helping, let me know here - given enough interest, we can come up with a proper solution.
           = render 'messages/form', message: @message
-
+  #show-copy.collapse
+    .container
+      .row
+        .col-12.col-md-10.offset-md-1.mb-3.col-lg-6.offset-lg-3
+          .copyable-content-container.p-3
+            .row
+              .col-10
+                .copyable-content
+                  Anyone, regardless of citizenship has 4th and 5th ammendment rights. See them here: https://redcardapp.herokuapp.com
+              .col-2
+                .copy-link.btn.btn-primary.btn-block.btn-sm
+                  copy
+  .container.text-center.py-5
+    .row
+      .col-12.col-md-10.offset-md-1.mb-3.col-lg-6.offset-lg-3
+        %a{ target: '_blank', href: 'https://www.ilrc.org/sites/default/files/documents/red_card-self_srv-english.pdf'}
+          You can use this PDF to print physical copies
+        %br
+        or
+        %br
+        %a{ target: '_blank', href: 'https://www.ilrc.org/red-cards'}
+          read more from the ILRC here.
 
 
 :javascript

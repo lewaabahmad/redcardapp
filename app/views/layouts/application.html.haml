@@ -2,7 +2,10 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %link{:href => "/manifest.json", :rel => "manifest"}/
     %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    %meta{:content => "#C50001", :name => "theme-color"}/
+    %link{:href => asset_path('icon_192.png'), :rel => "apple-touch-icon"}/
 
     %title Red Card Sender
     = csrf_meta_tags
@@ -12,3 +15,11 @@
   %body
     -# = render 'layouts/nav'
     = yield
+    :javascript
+      if (navigator.serviceWorker) {
+        navigator.serviceWorker.register('/service-worker.js', { scope: './' })
+          .then(function (reg) {
+            console.log('[Companion]', 'Service worker registered!');
+            console.log(reg);
+          });
+      }

@@ -41,3 +41,14 @@ nav {
     font-size: 22px;
   }
 }
+
+.copyable-content-container {
+  background: #FFF;
+  border: 1px solid #ddd;
+
+  .copy-link {
+    position: relative !important;
+    bottom: -40;
+    right: 0;
+  }
+}
