@@ -13,6 +13,6 @@
     = form.hidden_field :type
   .field.form-group
     = form.label :recipient, "Recipient's Phone Number"
-    = form.text_field :recipient, class: 'form-control'
+    = form.text_field :recipient, class: 'form-control', disabled: true
   .actions.text-right
     = form.submit 'Send', class: 'btn btn-primary'

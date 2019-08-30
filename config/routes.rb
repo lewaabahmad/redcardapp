@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get '/about', to: 'main#about'
   get '/privacy-policy', to: 'main#privacy_policy'
 
-  resources :messages
-  resources :text_messages, :controller => 'messages'
+  # resources :messages
+  resources :text_messages, :controller => 'messages', only: [:create]
   # resources :email, :controller => 'messages'
 end
