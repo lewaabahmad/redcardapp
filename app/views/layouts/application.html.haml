@@ -7,7 +7,24 @@
     %meta{:content => "#C50001", :name => "theme-color"}/
     %link{:href => asset_path('icon_192.png'), :rel => "apple-touch-icon"}/
 
-    %title Red Card Sender
+    / COMMON TAGS
+    %title Digital Red Card
+    / Search Engine
+    %meta{:content => "All people in the United States, regardless of immigration status, have certain rights and protections under the U.S. Constitution. The ILRC’s Red Cards help people assert their rights and defend themselves in many situations, such as when ICE agents go to a home.", :name => "description"}/
+    %meta{:content => asset_path('icon_512.png'), :name => "image"}/
+    / Schema.org for Google
+    %meta{:content => "Digital Red Card", :itemprop => "name"}/
+    %meta{:content => "All people in the United States, regardless of immigration status, have certain rights and protections under the U.S. Constitution. The ILRC’s Red Cards help people assert their rights and defend themselves in many situations, such as when ICE agents go to a home.", :itemprop => "description"}/
+    %meta{:content => asset_path('icon_512.png'), :itemprop => "image"}/
+    / Open Graph general (Facebook, Pinterest & Google+)
+    %meta{:content => "Digital Red Card", :name => "og:title"}/
+    %meta{:content => "All people in the United States, regardless of immigration status, have certain rights and protections under the U.S. Constitution. The ILRC’s Red Cards help people assert their rights and defend themselves in many situations, such as when ICE agents go to a home.", :name => "og:description"}/
+    %meta{:content => asset_path('icon_512.png'), :name => "og:image"}/
+    %meta{:content => "https://www.digiredcard.com", :name => "og:url"}/
+    %meta{:content => "Digital Red Card", :name => "og:site_name"}/
+    %meta{:content => "website", :name => "og:type"}/
+
+
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag    'application', media: 'all'
