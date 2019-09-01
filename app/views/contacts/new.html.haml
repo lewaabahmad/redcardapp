@@ -1,0 +1,12 @@
+.container.py-5
+  .row
+    .col-12.col-md-10.offset-md-1.col-lg-6.offset-lg-3
+      %a.btn.btn-primary.btn-sm.my-5{ href: '/' }
+        < back
+      - if notice
+        .alert.alert-success.text-center
+          %p#notice.mb-0
+            = notice
+      %p.text-center.px-5.py-3.font-italic
+        Please note that we are not a legal resource nor can we provide material help.
+      = render 'contacts/form', contact: @contact
