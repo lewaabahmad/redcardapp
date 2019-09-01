@@ -24,7 +24,7 @@
     %meta{:content => "Digital Red Card", :name => "og:site_name"}/
     %meta{:content => "website", :name => "og:type"}/
 
-
+    = render 'layouts/google_analyics'
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag    'application', media: 'all'
