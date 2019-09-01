@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
   root 'main#home'
-  # get '/card', to: 'main#card'
+  # get '/es', to: 'main#home_es'
+
   get '/about', to: 'main#about'
+  get '/faqs', to: 'main#faqs'
+  get '/resources', to: 'main#resources'
+  get '/contact', to: 'main#contact'
   get '/privacy-policy', to: 'main#privacy_policy'
 
   get '/service-worker.js' => "service_worker#service_worker"

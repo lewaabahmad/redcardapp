@@ -44,7 +44,8 @@
                 %a.ml-3{"aria-controls" => "show-menu", "aria-expanded" => "false", "data-toggle" => "collapse", :href => "#show-menu", :role => "button"}
                   = octicon "three-bars", height: 22, fill: '#fff'
       .row
-        .col-12.col-lg-8.offset-lg-2
+        -# .col-12.col-lg-8.offset-lg-2
+        .col-12.col-md-10.offset-md-1.col-lg-6.offset-lg-3
           #show-help.collapse
             .row.text-center
               .col-12
@@ -53,36 +54,21 @@
           #show-menu.collapse
             .row
               .col-12.text-right
-                %p
-                  FAQs
-                %p
-                  Additional Resources
-                %p
-                  Contact
+                %a.white{ href: '/faqs' }
+                  %p FAQs
+                -# %a.white{ href: '/resources' }
+                -#   %p Additional Resources
+                %a.white{ href: '/contact' }
+                  %p Contact
   .container
-    .row.py-3
+    .row.py-3.text-center
       .col-12.col-md-10.offset-md-1.col-lg-6.offset-lg-3
-        .row
-          .col-6
-            %a{"aria-controls" => "show-instructions", "aria-expanded" => "false", "data-toggle" => "collapse", :href => "#show-instructions", :role => "button"}
-              Instructions
-        .row
-          .col-6
-    .row.text-center
+        %a{"aria-controls" => "show-instructions", "aria-expanded" => "false", "data-toggle" => "collapse", :href => "#show-instructions", :role => "button"}
+          click for instructions
+    .row
       .col-12.col-lg-8.offset-lg-2
         #show-instructions.collapse
-          .text-left.pb-5.pt-1
-            %ul
-              %li
-                DO NOT OPEN THE DOOR if an immigration agent is knocking on the door.
-              %li
-                DO NOT ANSWER ANY QUESTIONS from an immigration agent if they try to talk to you. You have the right to remain silent.
-              %li
-                DO NOT SIGN ANYTHING without first speaking to a lawyer. You have the right to speak with a lawyer.
-              %li
-                If you are outside of your home, ask the agent if you are free to leave and if they say yes, leave calmly.
-              %li
-                DO NOT GIVE YOUR PHONE TO THE AGENT. If you are inside of your home or car, show your phone through the window. You may give a physical copy of this card to the agent.
+          = render "instructions"
     .row
       .col-12.col-md-10.offset-md-1.col-lg-6.offset-lg-3
         .jumbotron.p-3.brand-inverted.mb-2
@@ -102,7 +88,7 @@
           %p.pb-0.mb-0
             I choose to exercise my constitutional rights.
           %p.pb-0.mb-0
-            These cards are available to citizens and noncitizens alike
+            These cards are available to citizens and noncitizens alike. 
   .container
     .row
       .col-12.col-md-10.offset-md-1.mb-3.col-lg-6.offset-lg-3

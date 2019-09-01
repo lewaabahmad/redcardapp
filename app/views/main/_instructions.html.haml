@@ -1,0 +1,41 @@
+.text-center
+  %ul#pills-tab.nav.nav-pills.mb-3.mx-auto{:role => "tablist"}
+    %li.nav-item
+      %a#instructions-english-tab.nav-link.active{"aria-controls" => "instructions-english", "aria-selected" => "true", "data-toggle" => "pill", :href => "#instructions-english", :role => "tab"}
+        English
+    %li.nav-item
+      %a#pills-spanish-tab.nav-link{"aria-controls" => "pills-spanish", "aria-selected" => "false", "data-toggle" => "pill", :href => "#pills-spanish", :role => "tab"}
+        Spanish
+  -# %li.nav-item
+  -#   %a#pills-arabic-tab.nav-link{"aria-controls" => "pills-arabic", "aria-selected" => "false", "data-toggle" => "pill", :href => "#pills-arabic", :role => "tab"}
+  -#     Arabic
+#pills-tabContent.tab-content
+  #instructions-english.tab-pane.fade.show.active{"aria-labelledby" => "instructions-english-tab", :role => "tabpanel"}
+    %p You have constitutional rights:
+    .text-left.pb-5.pt-1
+      %ul
+        %li
+          DO NOT OPEN THE DOOR if an immigration agent is knocking on the door.
+        %li
+          DO NOT ANSWER ANY QUESTIONS from an immigration agent if they try to talk to you. You have the right to remain silent.
+        %li
+          DO NOT SIGN ANYTHING without first speaking to a lawyer. You have the right to speak with a lawyer.
+        %li
+          If you are outside of your home, ask the agent if you are free to leave and if they say yes, leave calmly.
+        %li
+          DO NOT GIVE YOUR PHONE TO THE AGENT. If you are inside of your home or car, show your phone through the window. You may give a physical copy of this card to the agent. 
+  #pills-spanish.tab-pane.fade{"aria-labelledby" => "pills-spanish-tab", :role => "tabpanel"}
+    %p Usted tiene derechos constitucionales:
+    .text-left.pb-5.pt-1
+      %ul
+        %li
+          NO ABRA LA PUERTA si un agente de inmigración está tocando la puerta.
+        %li
+          NO CONTESTE NINGUNA PREGUNTA de un agente de inmigración si el trata de hablar con usted. Usted tiene el derecho de mantenerse callado.
+        %li
+          NO FIRME NADA sin antes hablar con un abogado. Usted tiene el derecho de hablar con un abogado.
+        %li
+          Si usted está afuera de su casa, pregunte al agente si es libre para irse y si dice que sí, váyase con tranquilidad.
+        %li
+          NO LE DES TU TELÉFONO A EL AGENTE. Si estás dentro de tu casa o auto, puedes mostrar tu teléfono por la ventana. También puedes darle una copia física de esta carta al agente.
+  -# #pills-arabic.tab-pane.fade{"aria-labelledby" => "pills-arabic-tab", :role => "tabpanel"}
