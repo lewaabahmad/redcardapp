@@ -29,6 +29,10 @@
     .container
       .row
         .col-12.col-md-6.offset-md-3.mt-2.mb-1.mt-md-5.mb-md-3
+          -# %h1.primary-color
+          -#   Digital Red Card
+          -#   %a.ml-3{"aria-controls" => "show-help", "aria-expanded" => "false", "data-toggle" => "collapse", :href => "#show-help", :role => "button"}
+          -#     = octicon "three-bars", height: 22, fill: '#fff', class: 'float-right'
           .row
             .col-8
               %h1.primary-color
@@ -37,30 +41,48 @@
               .float-right
                 %a{"aria-controls" => "show-help", "aria-expanded" => "false", "data-toggle" => "collapse", :href => "#show-help", :role => "button"}
                   = octicon "question", height: 22, fill: '#fff'
-                %a.ml-3{"aria-controls" => "show-help", "aria-expanded" => "false", "data-toggle" => "collapse", :href => "#show-help", :role => "button"}
+                %a.ml-3{"aria-controls" => "show-menu", "aria-expanded" => "false", "data-toggle" => "collapse", :href => "#show-menu", :role => "button"}
                   = octicon "three-bars", height: 22, fill: '#fff'
-      .row.text-center
+      .row
         .col-12.col-lg-8.offset-lg-2
           #show-help.collapse
-            %p.mt-0.mb-4
-              All people in the United States, regardless of immigration status, have certain rights and protections under the U.S. Constitution. The ILRC’s Red Cards help people assert their rights and defend themselves in many situations, such as when ICE agents go to a home. 
-            %p.pb-0
-              To use this card:
-            .text-left.mb-4
-              %ul
-                %li
-                  DO NOT OPEN THE DOOR if an immigration agent is knocking on the door.
-                %li
-                  DO NOT ANSWER ANY QUESTIONS from an immigration agent if they try to talk to you. You have the right to remain silent.
-                %li
-                  DO NOT SIGN ANYTHING without first speaking to a lawyer. You have the right to speak with a lawyer.
-                %li
-                  If you are outside of your home, ask the agent if you are free to leave and if they say yes, leave calmly.
-                %li
-                  DO NOT GIVE YOUR PHONE TO THE AGENT. If you are inside of your home or car, show your phone through the window. You may give a physical copy of this card to the agent.
-          -# %p.pb-0.mb-0
-          -#   This site allows you to send the Red Card to anyone who needs it.
+            .row.text-center
+              .col-12
+                %p.mt-0.mb-4
+                  All people in the United States, regardless of immigration status, have certain rights and protections under the U.S. Constitution. The ILRC’s Red Cards help people assert their rights and defend themselves in many situations, such as when ICE agents go to a home.
+          #show-menu.collapse
+            .row
+              .col-12.text-right
+                %p
+                  FAQs
+                %p
+                  Additional Resources
+                %p
+                  Contact
   .container
+    .row.py-3
+      .col-12.col-md-10.offset-md-1.col-lg-6.offset-lg-3
+        .row
+          .col-6
+            %a{"aria-controls" => "show-instructions", "aria-expanded" => "false", "data-toggle" => "collapse", :href => "#show-instructions", :role => "button"}
+              Instructions
+        .row
+          .col-6
+    .row.text-center
+      .col-12.col-lg-8.offset-lg-2
+        #show-instructions.collapse
+          .text-left.pb-5.pt-1
+            %ul
+              %li
+                DO NOT OPEN THE DOOR if an immigration agent is knocking on the door.
+              %li
+                DO NOT ANSWER ANY QUESTIONS from an immigration agent if they try to talk to you. You have the right to remain silent.
+              %li
+                DO NOT SIGN ANYTHING without first speaking to a lawyer. You have the right to speak with a lawyer.
+              %li
+                If you are outside of your home, ask the agent if you are free to leave and if they say yes, leave calmly.
+              %li
+                DO NOT GIVE YOUR PHONE TO THE AGENT. If you are inside of your home or car, show your phone through the window. You may give a physical copy of this card to the agent.
     .row
       .col-12.col-md-10.offset-md-1.col-lg-6.offset-lg-3
         .jumbotron.p-3.brand-inverted.mb-2
