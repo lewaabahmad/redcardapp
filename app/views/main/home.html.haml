@@ -94,9 +94,15 @@
       .col-12.col-md-10.offset-md-1.mb-3.col-lg-6.offset-lg-3
         .row
           .col-10
+            -# = audio_tag("read_rights.m4a")
+            %figure
+              %audio{:controls => "", :src => "/read_rights.m4a"}
+                Your browser does not support the
+                %code audio
+                element.
           .col-2.text-right
             .card-full-screen-toggler
-              = octicon "screen-full", height: 22, fill: '#C02C31'
+              = octicon "screen-full", height: 32, fill: '#C02C31'
   .container
     .row
       .col-12.col-md-10.offset-md-1.mb-3.col-lg-6.offset-lg-3
