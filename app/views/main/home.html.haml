@@ -95,17 +95,19 @@
         .row
           .col-10.mb-2
             %figure.mb-0
-              %audio{:controls => "", :src => "/read_rights.m4a"}
+              %audio{:controls => ""}
+                %source{ src: "/read_rights.m4a" }
+                %source{ src: "/read_rights.ogg" }
                 Your browser does not support the
                 %code audio
                 element.
-            %small.d-none#mobile-safari-warning
-              The Safari iOS mobile browser limits HTML5 audio on webpages. 
-              %a{target: '_blank', href: "/read_rights.m4a"}
-                Access the file directly here instead.
-          .col-2.text-right
-            .card-full-screen-toggler
-              = octicon "screen-full", height: 32, fill: '#C02C31'
+          -#   %small.d-none#mobile-safari-warning
+          -#     The Safari iOS mobile browser limits HTML5 audio on webpages. 
+          -#     %a{target: '_blank', href: "/read_rights.m4a"}
+          -#       Access the file directly here instead.
+          -# .col-2.text-right
+          -#   .card-full-screen-toggler
+          -#     = octicon "screen-full", height: 32, fill: '#C02C31'
   .container
     .row
       .col-12.col-md-10.offset-md-1.mb-3.col-lg-6.offset-lg-3
@@ -172,10 +174,10 @@
       })
     })
   })
-  var isMobileSafari = /iP(ad|hone|od).+Version\/[\d\.]+.*Safari/i.test(navigator.userAgent)
-  if (isMobileSafari) {
-    $('#mobile-safari-warning').removeClass('d-none')
-  }
+  //var isMobileSafari = /iP(ad|hone|od).+Version\/[\d\.]+.*Safari/i.test(navigator.userAgent)
+  //if (isMobileSafari) {
+  //  $('#mobile-safari-warning').removeClass('d-none')
+  //}
 
 
 -# .container
