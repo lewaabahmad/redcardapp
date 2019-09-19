@@ -93,7 +93,7 @@
     .row
       .col-12.col-md-10.offset-md-1.mb-3.col-lg-6.offset-lg-3
         .row
-          .col-10.mb-2
+          .col-10
             %figure.mb-0
               %audio{:controls => "true"}
                 %source{ src: "/read_rights.m4a" }
@@ -101,16 +101,17 @@
                 Your browser does not support the
                 %code audio
                 element.
+          .col-2.text-right
+            .card-full-screen-toggler
+              = octicon "screen-full", height: 32, fill: '#C02C31'
+          .col-12.text-center.mb-2
             %small
               %span.d-none#mobile-safari-warning
                 = "The Safari iOS mobile browser limits HTML5 audio on webpages. "
               %a{target: '_blank', href: "https://drive.google.com/open?id=1inmTD41M53mYwPS23SfV-59Og-ibsd0U"}
-                Access and download the audio file on Google Drive here
+                Access and download the audio file on Google Drive here instead.
                 %span.d-none#mobile-safari-warning-instead
                   = ' instead.'
-          -# .col-2.text-right
-          -#   .card-full-screen-toggler
-          -#     = octicon "screen-full", height: 32, fill: '#C02C31'
   .container
     .row
       .col-12.col-md-10.offset-md-1.mb-3.col-lg-6.offset-lg-3
