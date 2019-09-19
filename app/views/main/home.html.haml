@@ -101,10 +101,13 @@
                 Your browser does not support the
                 %code audio
                 element.
-          -#   %small.d-none#mobile-safari-warning
-          -#     The Safari iOS mobile browser limits HTML5 audio on webpages. 
-          -#     %a{target: '_blank', href: "/read_rights.m4a"}
-          -#       Access the file directly here instead.
+            %small
+              %span.d-none#mobile-safari-warning
+                = "The Safari iOS mobile browser limits HTML5 audio on webpages. "
+              %a{target: '_blank', href: "https://drive.google.com/open?id=1inmTD41M53mYwPS23SfV-59Og-ibsd0U"}
+                Access and download the audio file on Google Drive here
+                %span.d-none#mobile-safari-warning-instead
+                  = ' instead.'
           -# .col-2.text-right
           -#   .card-full-screen-toggler
           -#     = octicon "screen-full", height: 32, fill: '#C02C31'
@@ -174,10 +177,11 @@
       })
     })
   })
-  //var isMobileSafari = /iP(ad|hone|od).+Version\/[\d\.]+.*Safari/i.test(navigator.userAgent)
-  //if (isMobileSafari) {
-  //  $('#mobile-safari-warning').removeClass('d-none')
-  //}
+  var isMobileSafari = /iP(ad|hone|od).+Version\/[\d\.]+.*Safari/i.test(navigator.userAgent)
+  if (isMobileSafari) {
+    $('#mobile-safari-warning').removeClass('d-none')
+    $('#mobile-safari-warning-instead').removeClass('d-none')
+  }
 
 
 -# .container
